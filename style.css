@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+
+body {
+    background-image: url("img/background.jpg");
+    background-repeat: no-repeat;
+
+    background-size: cover;
+    position: sticky;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: lightgray;
+}
+
+.quiz-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 1vmin;
+}
+
+.title {
+    font-family: 'Fredericka the Great', cursive;
+    padding: 4vw;
+    font-size: 37px;
+}
+
+p {
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 25px;
+    opacity: 1;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(3, 150px);
+    column-gap: 5vw;
+    row-gap: 5vw;
+}
+
+.card {
+    border-style: hidden;
+    border-radius: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: darkslategray;
+
+    background-color: lightgray;
+
+    position: relative;
+    transition: all 0.7s linear;
+    transform-style: preserve-3d;
+}
+
+.front, .back {
+    border-style: solid;
+    border-radius: 40px;
+    border-color: gray;
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    opacity: 0.55;
+}
+
+.front {
+    background-color: lightgray;
+    z-index: 2;
+    backface-visibility: hidden;
+}
+
+.back {
+    background-color: orange;
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+
+.card:active {
+    backface-visibility: visible;
+    transform: rotateY(180deg);
+}
+
+.grid-container {
+    perspective: 1000px;
+}
