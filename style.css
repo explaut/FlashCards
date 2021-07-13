@@ -19,6 +19,7 @@ body {
     align-items: center;
     position: relative;
     top: 1vmin;
+    opacity: 0.85;
 }
 
 .title {
@@ -69,7 +70,7 @@ p {
     justify-content: center;
     align-items: center;
     position: absolute;
-    opacity: 0.55;
+    opacity: 0.75;
 }
 
 .front {
